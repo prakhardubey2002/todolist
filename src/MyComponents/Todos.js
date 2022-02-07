@@ -14,10 +14,7 @@ export const Todos = (props) => {
         props.todos.map((todo)=>{ 
                      
          return( 
-           <>
          <TodosItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
-        <hr />
-        </>
          )
         }) 
        }
