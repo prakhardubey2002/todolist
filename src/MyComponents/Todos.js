@@ -2,14 +2,26 @@ import React from 'react';
 import {TodosItem} from "../MyComponents/TodosItem"
 
 export const Todos = (props) => {
+  let mystyle={
+    minHeight:"80vh",
+    margin:"40px auto",
+  }
   return (
-     <div className="container">
-        <h3 className="text-center my-3">Todos List</h3>
-        {props.todos.map((todo)=>{
-              return <TodosItem todo={todo} onDelete={props.onDelete} />
-        })}
-        
+   
+     <div className="container" style={mystyle}>
+        <h3 className=" my-3">Todos List</h3>
+        {props.todos.length===0?"No todos to display":
+        props.todos.map((todo)=>{ 
+                     
+         return( 
+           <>
+         <TodosItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
+        <hr />
+        </>
+         )
+        }) 
+       }
   </div>
-  );
-};
+  )
+}
 
