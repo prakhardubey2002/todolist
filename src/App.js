@@ -2,6 +2,7 @@ import Header from "./MyComponents/Header.js";
 import { Todos } from "./MyComponents/Todos";
 import { Footer } from "./MyComponents/Footer.js";
 import { AddTodo } from "./MyComponents/AddTodo";
+import {TodosItem} from "./MyComponents/tes.js"
 import React, { useState, useEffect } from "react";
 function App() {
   let initTodo;

@@ -1,5 +1,5 @@
 import React from 'react';
-import {TodosItem} from "../MyComponents/TodosItem"
+import {TodosItem} from "./tes.js"
 
 export const Todos = (props) => {
   let mystyle={
@@ -13,7 +13,7 @@ export const Todos = (props) => {
         {props.todos.length===0?"No todos to display":
         props.todos.map((todo)=>{ 
                      
-         return( 
+         return(
          <TodosItem todo={todo} key={todo.sno} onDelete={props.onDelete} />
          )
         }) 
